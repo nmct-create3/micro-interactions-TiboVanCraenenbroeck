@@ -618,7 +618,9 @@ input::placeholder {
     ---
     Everything form related here
 */
-
+.c-form-field {
+	position: relative;
+}
 .c-form-field--option {
 	display: flex;
 	align-items: center;
@@ -696,6 +698,23 @@ more padding on the right to avoid overlap
 	line-height: 16px;
 	/*color: var(--label-color);*/
 	color: var(--label-color, var(--global-color-neutral-xx-dark));
+	--label-transform: 0px;
+}
+
+.c-label__word {
+	position: absolute;
+	z-index: 999;
+	top: 12px;
+	left: 8px;
+	padding: 4px 8px;
+	will-change: transform;
+	transform: translateY(0);
+	transition: transform 200ms ease-in-out;
+	box-shadow: 0 0 4px 4px rgba(255, 255, 255, 0.8);
+	background: white;
+}
+.c-password-toggle-container > .c-input:focus + .c-label > .c-label__word {
+	transform: translateY(-24px);
 }
 
 .c-label--option {
