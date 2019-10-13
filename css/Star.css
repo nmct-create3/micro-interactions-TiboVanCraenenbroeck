@@ -1,0 +1,38 @@
+li {
+	list-style: none;
+	padding: 0;
+}
+body {
+	background: rgb(233, 252, 255);
+	font-size: 16px;
+	font-family: 'Helvetica Neue', 'Segoe';
+}
+.o-centered {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.o-hide-accessible {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	padding: 0;
+	margin: -1px;
+	overflow: hidden;
+	clip: rect(0, 0, 0, 0);
+	border: 0;
+}
+.c-rating__symbol {
+	height: 1.5rem;
+	fill: #ccc;
+	stroke: none;
+}
+.c-input:focus + .c-rating .c-rating__symbol {
+	filter: drop-shadow(0 1px 1px rgba(255, 220, 23, 0.4));
+}
+.c-input:checked + .c-rating .c-rating__symbol {
+	fill: rgb(255, 220, 23);
+}
+.c-rating--checked {
+	fill: rgb(255, 220, 23);
+}

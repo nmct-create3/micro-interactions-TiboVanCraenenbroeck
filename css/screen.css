@@ -713,7 +713,8 @@ more padding on the right to avoid overlap
 	box-shadow: 0 0 4px 4px rgba(255, 255, 255, 0.8);
 	background: white;
 }
-.c-password-toggle-container > .c-input:focus + .c-label > .c-label__word {
+.c-form-field .c-input:focus + .c-form-field .c-label .c-label__word {
+	background: red;
 	transform: translateY(-24px);
 }
 
