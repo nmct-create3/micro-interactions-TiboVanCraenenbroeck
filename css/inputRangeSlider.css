@@ -1,0 +1,54 @@
+:root {
+	--global-color-alpha: #3385ff;
+	--global-color-neutral-xxxx-light: #f5f6fa;
+	--global-color-neutral-xxx-light: #e2e3e7;
+}
+.c-range {
+	display: block;
+	height: 8px;
+	padding: 0;
+	border-radius: 8px;
+	background-color: var(--global-color-neutral-xxxx-light);
+	border: 1px solid var(--global-color-neutral-xxx-light);
+}
+.c-range::-webkit-slider-thumb {
+	-webkit-appearance: none;
+
+	appearance: none;
+
+	width: 18px;
+
+	height: 18px;
+
+	border-radius: 8px;
+
+	background: var(--global-color-alpha);
+}
+.c-range-holder {
+	width: calc(100% - 18px);
+}
+.c-range-holder::after {
+	content: attr(data-value);
+
+	display: inline-block;
+
+	width: 32px;
+
+	margin-top: 12px;
+
+	padding: 4px;
+
+	font-size: 0.8rem;
+
+	text-align: center;
+
+	border-radius: 4px;
+
+	background: var(--global-color-neutral-xxxx-light);
+
+	transform: scale(0);
+
+	transition: transform 200ms ease-in-out;
+
+	transform-origin: center top;
+}

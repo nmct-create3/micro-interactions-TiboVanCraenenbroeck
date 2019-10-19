@@ -704,7 +704,7 @@ more padding on the right to avoid overlap
 .c-label__word {
 	position: absolute;
 	z-index: 999;
-	top: 12px;
+	top: 20px;
 	left: 8px;
 	padding: 4px 8px;
 	will-change: transform;
@@ -713,8 +713,12 @@ more padding on the right to avoid overlap
 	box-shadow: 0 0 4px 4px rgba(255, 255, 255, 0.8);
 	background: white;
 }
-.c-form-field .c-input:focus + .c-form-field .c-label .c-label__word {
-	background: red;
+
+.has-error .c-label__word {
+	top: 28px;
+}
+.c-form-field .c-input:focus + .c-label .c-label__word {
+	/* background: red;  */
 	transform: translateY(-24px);
 }
 
